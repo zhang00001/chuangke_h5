@@ -6,7 +6,12 @@
       @click-left="$router.go(-1)"
       @click-right="$router.push({ name: 'share' })"
     >
-      <img src="../../assets/shangchuan@3x.png" slot="right" alt   style="vertical-align: middle; width: 22px;height: 22px;"/>
+      <img
+        src="../../assets/shangchuan@3x.png"
+        slot="right"
+        alt
+        style="vertical-align: middle; width: 22px;height: 22px;"
+      />
     </van-nav-bar>
     <div class="top_div">
       <div class="h3">普通会员</div>
@@ -17,10 +22,18 @@
       </div>
     </div>
     <div class="btn_div">
-      <p @click="f_tuj(1)" v-if="total_List.t==0">推荐人确认</p>
-      <p style="background:#999999" v-if="total_List.t==1">推荐人确认中</p>
-      <p @click="f_tuj(2)" v-if="total_List.l==0">领导人确认</p>
-      <p style="background:#999999" v-if="total_List.l==1">领导人确认中</p>
+      <p @click="f_tuj(1)" class="active" v-if="total_List.t==0">推荐人确认</p>
+      <p style="background:#999999" v-if="total_List.t==1">
+        推荐人确认中
+        <br />
+        {{total_List.t_P}}
+      </p>
+      <p @click="f_tuj(2)" class="active" v-if="total_List.l==0">领导人确认</p>
+      <p style="background:#999999" v-if="total_List.l==1">
+        领导人确认中
+        <br />
+        {{total_List.l_p}}
+      </p>
     </div>
   </div>
 </template>
@@ -89,7 +102,7 @@ export default {
   .div {
     width: 80%;
     margin-left: 10%;
-      display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
     display: -moz-box; /* 老版本语法: Firefox (buggy) */
     display: -ms-flexbox; /* 混合版本语法: IE 10 */
     display: -webkit-flex; /* 新版本语法: Chrome 21+ */
@@ -118,18 +131,30 @@ export default {
 }
 .btn_div {
   text-align: center;
-  margin-top: 350px;
+  margin-top: 9.333333rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
   p {
     display: inline-block;
-    width: 155px;
-    height: 30px;
-    background: @bg_color;
-    border-radius: 20px;
+    width: 4.133333rem;
+    height: 1.2rem;
+    background: #6356ff;
+    border-radius: 0.533333rem;
     text-align: center;
-    line-height: 30px;
-    font-size: 14px;
+    line-height: 0.6rem;
+    font-size: 0.373333rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .active {
+    // line-height: 1.1rem;
   }
 }
 

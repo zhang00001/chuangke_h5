@@ -44,7 +44,7 @@
       </van-dialog>
     </van-panel>
     <div class="concat"></div>
-    <van-panel title="复消积分兑换" style="padding-bottom: 20px;">
+    <!-- <van-panel title="复消积分兑换" style="padding-bottom: 20px;">
       <div>
         <p class="v_p_p">汇率</p>
         <h3 class="v_p_h3">1复消积分={{1*huilv.fx}}流通券</h3>
@@ -57,7 +57,7 @@
         />
         <p class="v_p_p_2">
           流通券：{{m_fuxiao*huilv.fx}}
-          <!-- <span v-if="m_consume>lt*1">数量不足</span> -->
+      
         </p>
         <div class="btn_div" @click="f_Dialog2">兑换</div>
       </div>
@@ -70,7 +70,7 @@
         <p class="v_a_p">兑换复消积分数量：{{m_fuxiao}}</p>
         <p class="v_a_p">需要流通券：{{m_fuxiao*huilv.fx}}</p>
       </van-dialog>
-    </van-panel>
+    </van-panel>-->
   </div>
 </template>
 <script>
